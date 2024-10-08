@@ -9,12 +9,12 @@ export const AppDataSource = new DataSource({
   port: 30432, // Puerto estándar para PostgreSQL
   username: 'juliaosistemdev', // Cambia esto por tu usuario de PostgreSQL
   password: '0d068B4290@123', // Cambia esto por tu contraseña de PostgreSQL
-  database: 'juliasistemnext', // Nombre de la base de datos
+  database: 'juliaosistem', // Nombre de la base de datos
   synchronize: false,
   logging: true,
   entities: [Compra,Producto],
   schema: 'public',
-  connectTimeoutMS: 6000,
+  connectTimeoutMS: 7000,
 });
 
 AppDataSource.initialize().then(() => {

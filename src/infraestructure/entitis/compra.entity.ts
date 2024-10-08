@@ -1,7 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, BeforeInsert } from 'typeorm';
-
-import { v4 as uuidv4 } from 'uuid';
-import { Producto } from './producto.entity';
+import { Entity, PrimaryGeneratedColumn, Column, } from 'typeorm';
 
 @Entity()
 export class Compra {
@@ -20,8 +17,4 @@ export class Compra {
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   fecha: Date;
 
-  @BeforeInsert()
-  generateId() {
-    this.id = uuidv4(); // Genera un nuevo UUID
-  }
 }
